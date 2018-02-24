@@ -6,3 +6,7 @@ card device. That device will lock the card which means it was played and it's t
 its next move. The game is played by two player. Each hologram is able to hit each other directly or by
 its abilities. Each player has up to four cards and two activation devices. So at its max there are two cards
 vs two cards. As soon as one player loses all cards he loses and the other one wins.
+
+## Dependencies
+
+- Catch2-2.0.1 - Only needed to be able to compile the unit tests
