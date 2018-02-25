@@ -6,7 +6,7 @@ namespace MagicStack
 {
     void CMenuView::DisplayHeadline() const
     {
-        this->DisplayMessageBox("Magic Stack Menu Prototype - Build " __DATE__ " " __TIME__);
+        this->DisplayMessageBox("Magic Stack - Build " __DATE__ " " __TIME__);
         this->DisplayNewLine();
     }
 
@@ -15,7 +15,7 @@ namespace MagicStack
         this->DisplayArrowText("Welcome to the Magic Stack!");
         this->DisplayNewLine();
         this->DisplayArrowText("You're in the main menu right now!");
-        this->DisplayArrowText("Please choose what you're like to do right now!");
+        this->DisplayArrowText("Please choose what you're like to do!");
         this->DisplayNewLine();
     }
 
