@@ -27,6 +27,7 @@
     <ClInclude Include="Src\Controller\MenuController.h" />
     <ClInclude Include="Src\Helper\Macros.h" />
     <ClInclude Include="Src\Model\IAction.h" />
+    <ClInclude Include="Src\Model\Menu.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\BaseMenuController.cpp" />
@@ -34,6 +35,7 @@
     <ClCompile Include="Src\Controller\FrontController.cpp" />
     <ClCompile Include="Src\Controller\MainController.cpp" />
     <ClCompile Include="Src\Controller\MenuController.cpp" />
+    <ClCompile Include="Src\Model\Menu.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5037DC1C-C28B-4011-8B6E-ACD43746641E}</ProjectGuid>
