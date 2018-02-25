@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Controller\ControllerTransition.h" />
     <ClInclude Include="Src\Controller\FrontController.h" />
     <ClInclude Include="Src\Controller\IController.h" />
     <ClInclude Include="Src\Helper\Macros.h" />
     <ClInclude Include="Src\Model\IAction.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Controller\ControllerTransition.cpp" />
     <ClCompile Include="Src\Controller\FrontController.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
