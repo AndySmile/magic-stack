@@ -29,43 +29,4 @@ namespace MagicStack
 
         this->DisplayNewLine();
     }
-
-    void CMenuView::DisplayBoxLine() const
-    {
-        std::cout << "##################################################################" << std::endl;
-    }
-
-    void CMenuView::DisplayBoxText(const std::string& text) const
-    {
-        std::cout << "##### " << text << std::endl;
-    }
-
-    void CMenuView::DisplayDotLine() const
-    {
-        std::cout << "...................................................................................................................................." << std::endl;
-    }
-
-    void CMenuView::DisplayRoundLine() const
-    {
-        std::cout << "*************************************************************************************************************************************" << std::endl;
-    }
-
-    void CMenuView::DisplayArrowText(const std::string& text) const
-    {
-        std::cout << ">>> " << text << std::endl;
-    }
-
-    void CMenuView::DisplayNewLine() const
-    {
-        std::cout << std::endl;
-    }
-
-    void CMenuView::DisplayMessageBox(const std::string& message) const
-    {
-        this->DisplayBoxLine();
-        this->DisplayBoxText("");
-        this->DisplayBoxText(message);
-        this->DisplayBoxText("");
-        this->DisplayBoxLine();
-    }
 }
