@@ -144,6 +144,11 @@
   <ItemGroup>
     <ClCompile Include="Src\Main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MagicStackLibrary\MagicStackLibrary.vcxproj">
+      <Project>{5037dc1c-c28b-4011-8b6e-acd43746641e}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
