@@ -2,6 +2,7 @@
 #define __MAGICSTACK_CONTROLLER_BASEMENUCONTROLLER_H__
 
 #include "IController.h"
+#include "../Model/Menu.h"
 
 namespace MagicStack
 {
@@ -13,22 +14,8 @@ namespace MagicStack
             CBaseMenuController() = default;
             virtual ~CBaseMenuController() = default;
 
-            virtual void Render() const override
-            {
-                this->View.DisplayMenu(this->Menu);
-            }
-
-            virtual IAction* Execute() const override
-            {
-                unsigned int selectedMenuId = 0;
-
-                do {
-                    std::cout << "Your selection: ";
-                    std::cin >> selectedMenuId;
-                } while (!this->Menu.IsValidItemId(selectedMenuId));
-
-                return this->Menu.GetAction(selectedMenuId);
-            }
+            virtual void Render() const override;
+            virtual IAction* Execute() const override;
 
         protected:
             CMenu Menu;
