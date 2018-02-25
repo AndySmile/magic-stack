@@ -1,6 +1,8 @@
 #ifndef __MAGICSTACK_CONTROLLER_MAINCONTROLLER_H__
 #define __MAGICSTACK_CONTROLLER_MAINCONTROLLER_H__
 
+#include "FrontController.h"
+
 namespace MagicStack
 {
     /**
@@ -11,10 +13,13 @@ namespace MagicStack
     class CMainController
     {
         public:
-            CMainController() = default;
+            CMainController();
             ~CMainController() = default;
 
             void Run();
+
+        private:
+            CFrontController FrontController;
     };
 }
 
