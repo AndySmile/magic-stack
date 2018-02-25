@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Controller\BaseMenuController.h" />
     <ClInclude Include="Src\Controller\MainController.h" />
     <ClInclude Include="Src\Controller\ControllerTransition.h" />
     <ClInclude Include="Src\Controller\FrontController.h" />
@@ -28,6 +29,7 @@
     <ClInclude Include="Src\Model\IAction.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Controller\BaseMenuController.cpp" />
     <ClCompile Include="Src\Controller\ControllerTransition.cpp" />
     <ClCompile Include="Src\Controller\FrontController.cpp" />
     <ClCompile Include="Src\Controller\MainController.cpp" />
