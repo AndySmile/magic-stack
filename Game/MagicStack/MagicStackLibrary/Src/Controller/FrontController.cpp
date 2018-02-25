@@ -3,6 +3,10 @@
 #include "../Model/IAction.h"
 #include "../Helper/Macros.h"
 
+#ifdef _DEBUG
+    #include <iostream>
+#endif
+
 namespace MagicStack
 {
     CFrontController::CFrontController()
@@ -34,7 +38,16 @@ namespace MagicStack
 
     void CFrontController::GoToController(const std::string& alias)
     {
-        this->SwitchToController(this->ControllerIndex[alias]);
+        auto it = this->ControllerIndex.find(alias);
+
+        if (it != this->ControllerIndex.end()) {
+            this->SwitchToController(it->second);
+        }
+#ifdef _DEBUG
+        else {
+            std::cout << "ERROR: The controller '" << alias << "' doesn't exist!" << std::endl;
+        }
+#endif
     }
 
     void CFrontController::Quit()
