@@ -7,6 +7,9 @@
     <Filter Include="Controller">
       <UniqueIdentifier>{d08f15ed-8861-4dd4-a023-669fb9ea013e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{fbf0b40a-b698-4d67-acb1-d632c7e68542}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Helper\Macros.h">
@@ -17,6 +20,9 @@
     </ClInclude>
     <ClInclude Include="Src\Controller\IController.h">
       <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Model\IAction.h">
+      <Filter>Model</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

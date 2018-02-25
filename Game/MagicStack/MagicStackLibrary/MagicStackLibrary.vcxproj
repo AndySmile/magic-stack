@@ -22,6 +22,7 @@
     <ClInclude Include="Src\Controller\FrontController.h" />
     <ClInclude Include="Src\Controller\IController.h" />
     <ClInclude Include="Src\Helper\Macros.h" />
+    <ClInclude Include="Src\Model\IAction.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp" />
