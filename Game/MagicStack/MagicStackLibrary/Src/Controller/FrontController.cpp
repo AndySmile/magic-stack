@@ -21,7 +21,7 @@ namespace MagicStack
         this->ControllerIndex.clear();
     }
 
-    void CFrontController::AddController(IController* controller, bool isDefault)
+    void CFrontController::AddController(IController* controller, const bool isDefault)
     {
         this->ControllerIndex[controller->GetAlias()] = controller;
 
@@ -57,10 +57,10 @@ namespace MagicStack
     void CFrontController::SwitchToController(IController* controller)
     {
         if (this->CurrentController != nullptr) {
-            this->CurrentController->Leave();
+            this->CurrentController->OnLeave();
         }
 
         this->CurrentController = controller;
-        this->CurrentController->Enter();
+        this->CurrentController->OnEnter();
     }
 }
