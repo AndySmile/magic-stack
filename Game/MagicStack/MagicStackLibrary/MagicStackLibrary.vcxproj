@@ -28,6 +28,7 @@
     <ClInclude Include="Src\Controller\IController.h" />
     <ClInclude Include="Src\Controller\MenuController.h" />
     <ClInclude Include="Src\Helper\Macros.h" />
+    <ClInclude Include="Src\Model\Action\ControllerAction.h" />
     <ClInclude Include="Src\Model\Action\QuitAction.h" />
     <ClInclude Include="Src\Model\Action\TransitionAction.h" />
     <ClInclude Include="Src\Model\IAction.h" />
@@ -43,6 +44,7 @@
     <ClCompile Include="Src\Controller\HelpController.cpp" />
     <ClCompile Include="Src\Controller\MainController.cpp" />
     <ClCompile Include="Src\Controller\MenuController.cpp" />
+    <ClCompile Include="Src\Model\Action\ControllerAction.cpp" />
     <ClCompile Include="Src\Model\Action\QuitAction.cpp" />
     <ClCompile Include="Src\Model\Action\TransitionAction.cpp" />
     <ClCompile Include="Src\Model\Menu.cpp" />
