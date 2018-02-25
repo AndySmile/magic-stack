@@ -60,6 +60,9 @@
     <ClInclude Include="Src\Model\Action\QuitAction.h">
       <Filter>Model\Action</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Controller\HelpController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp">
@@ -94,6 +97,9 @@
     </ClCompile>
     <ClCompile Include="Src\Model\Action\QuitAction.cpp">
       <Filter>Model\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Controller\HelpController.cpp">
+      <Filter>Controller</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
