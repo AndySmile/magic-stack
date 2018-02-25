@@ -3,6 +3,7 @@
 
 #include "IController.h"
 #include "../Model/Menu.h"
+#include "../View/MenuView.h"
 
 namespace MagicStack
 {
