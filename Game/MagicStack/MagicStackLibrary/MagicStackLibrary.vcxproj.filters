@@ -10,6 +10,9 @@
     <Filter Include="Model">
       <UniqueIdentifier>{fbf0b40a-b698-4d67-acb1-d632c7e68542}</UniqueIdentifier>
     </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{58995d6c-8f77-4fca-9b0b-7f10a725bb6d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Helper\Macros.h">
@@ -42,6 +45,9 @@
     <ClInclude Include="Src\Model\MenuItem.h">
       <Filter>Model</Filter>
     </ClInclude>
+    <ClInclude Include="Src\View\MenuView.h">
+      <Filter>View</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp">
@@ -64,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="Src\Model\MenuItem.cpp">
       <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\View\MenuView.cpp">
+      <Filter>View</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

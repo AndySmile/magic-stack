@@ -29,6 +29,7 @@
     <ClInclude Include="Src\Model\IAction.h" />
     <ClInclude Include="Src\Model\Menu.h" />
     <ClInclude Include="Src\Model\MenuItem.h" />
+    <ClInclude Include="Src\View\MenuView.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\BaseMenuController.cpp" />
@@ -38,6 +39,7 @@
     <ClCompile Include="Src\Controller\MenuController.cpp" />
     <ClCompile Include="Src\Model\Menu.cpp" />
     <ClCompile Include="Src\Model\MenuItem.cpp" />
+    <ClCompile Include="Src\View\MenuView.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5037DC1C-C28B-4011-8B6E-ACD43746641E}</ProjectGuid>
