@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Src\Controller\BaseMenuController.h" />
     <ClInclude Include="Src\Controller\HelpController.h" />
+    <ClInclude Include="Src\Controller\IControllerActionExecutable.h" />
     <ClInclude Include="Src\Controller\MainController.h" />
     <ClInclude Include="Src\Controller\ControllerTransition.h" />
     <ClInclude Include="Src\Controller\FrontController.h" />
