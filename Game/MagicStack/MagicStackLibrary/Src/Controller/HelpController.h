@@ -2,12 +2,13 @@
 #define __MAGICSTACK_CONTROLLER_HELPCONTROLLER_H__
 
 #include "BaseMenuController.h"
+#include "IControllerActionExecutable.h"
 
 namespace MagicStack
 {
     class CHelpController
         : public CBaseMenuController
-        , public IControllerAction
+        , public IControllerActionExecutable
     {
         public:
             CHelpController() = default;
