@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Helper\Macros.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5037DC1C-C28B-4011-8B6E-ACD43746641E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
