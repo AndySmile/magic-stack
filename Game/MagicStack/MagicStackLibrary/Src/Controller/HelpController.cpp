@@ -1,5 +1,6 @@
 #include "HelpController.h"
 #include "../Model/Action/TransitionAction.h"
+#include "../Model/Action/ControllerAction.h"
 #include <iostream>
 
 namespace MagicStack
