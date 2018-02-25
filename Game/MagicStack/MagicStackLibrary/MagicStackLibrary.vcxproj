@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Controller\FrontController.h" />
+    <ClInclude Include="Src\Controller\IController.h" />
     <ClInclude Include="Src\Helper\Macros.h" />
   </ItemGroup>
   <ItemGroup>
