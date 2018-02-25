@@ -13,6 +13,9 @@
     <Filter Include="View">
       <UniqueIdentifier>{58995d6c-8f77-4fca-9b0b-7f10a725bb6d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Model\Action">
+      <UniqueIdentifier>{9f035be7-941c-4c82-8046-cb37cd491bb0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Helper\Macros.h">
@@ -51,6 +54,9 @@
     <ClInclude Include="Src\View\BaseView.h">
       <Filter>View</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Model\Action\TransitionAction.h">
+      <Filter>Model\Action</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp">
@@ -79,6 +85,9 @@
     </ClCompile>
     <ClCompile Include="Src\View\BaseView.cpp">
       <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Model\Action\TransitionAction.cpp">
+      <Filter>Model\Action</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
