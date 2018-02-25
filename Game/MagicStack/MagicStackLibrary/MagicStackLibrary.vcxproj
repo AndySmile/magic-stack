@@ -19,7 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Controller\FrontController.h" />
     <ClInclude Include="Src\Helper\Macros.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\Controller\FrontController.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5037DC1C-C28B-4011-8B6E-ACD43746641E}</ProjectGuid>

@@ -4,10 +4,21 @@
     <Filter Include="Helper">
       <UniqueIdentifier>{d78e5b19-e353-4411-9670-a6afc5c9a221}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{d08f15ed-8861-4dd4-a023-669fb9ea013e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Helper\Macros.h">
       <Filter>Helper</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Controller\FrontController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\Controller\FrontController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
