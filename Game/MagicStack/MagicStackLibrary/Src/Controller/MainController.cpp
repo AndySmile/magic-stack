@@ -2,7 +2,7 @@
 
 namespace MagicStack
 {
-    void MainController::Run()
+    void CMainController::Run()
     {
 
     }

@@ -6,7 +6,7 @@
 
 int main()
 {
-    MagicStack::MainController mainController;
+    MagicStack::CMainController mainController;
 
     mainController.Run();
 

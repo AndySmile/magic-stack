@@ -8,11 +8,11 @@ namespace MagicStack
      *
      * Manages the entire game.
      */
-    class MainController
+    class CMainController
     {
         public:
-            MainController() = default;
-            ~MainController() = default;
+            CMainController() = default;
+            ~CMainController() = default;
 
             void Run();
     };
