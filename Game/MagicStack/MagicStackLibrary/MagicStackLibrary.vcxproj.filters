@@ -30,6 +30,9 @@
     <ClInclude Include="Src\Controller\MainController.h">
       <Filter>Controller</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Controller\MenuController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp">
@@ -39,6 +42,9 @@
       <Filter>Controller</Filter>
     </ClCompile>
     <ClCompile Include="Src\Controller\MainController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Controller\MenuController.cpp">
       <Filter>Controller</Filter>
     </ClCompile>
   </ItemGroup>
