@@ -57,6 +57,9 @@
     <ClInclude Include="Src\Model\Action\TransitionAction.h">
       <Filter>Model\Action</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Model\Action\QuitAction.h">
+      <Filter>Model\Action</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp">
@@ -87,6 +90,9 @@
       <Filter>View</Filter>
     </ClCompile>
     <ClCompile Include="Src\Model\Action\TransitionAction.cpp">
+      <Filter>Model\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Model\Action\QuitAction.cpp">
       <Filter>Model\Action</Filter>
     </ClCompile>
   </ItemGroup>
