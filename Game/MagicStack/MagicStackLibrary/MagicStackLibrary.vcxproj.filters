@@ -69,6 +69,9 @@
     <ClInclude Include="Src\Model\Action\ControllerAction.h">
       <Filter>Model\Action</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Controller\GameController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp">
@@ -109,6 +112,9 @@
     </ClCompile>
     <ClCompile Include="Src\Model\Action\ControllerAction.cpp">
       <Filter>Model\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Controller\GameController.cpp">
+      <Filter>Controller</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

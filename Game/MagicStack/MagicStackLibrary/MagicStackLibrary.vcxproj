@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Controller\BaseMenuController.h" />
+    <ClInclude Include="Src\Controller\GameController.h" />
     <ClInclude Include="Src\Controller\HelpController.h" />
     <ClInclude Include="Src\Controller\IControllerActionExecutable.h" />
     <ClInclude Include="Src\Controller\MainController.h" />
@@ -41,6 +42,7 @@
     <ClCompile Include="Src\Controller\BaseMenuController.cpp" />
     <ClCompile Include="Src\Controller\ControllerTransition.cpp" />
     <ClCompile Include="Src\Controller\FrontController.cpp" />
+    <ClCompile Include="Src\Controller\GameController.cpp" />
     <ClCompile Include="Src\Controller\HelpController.cpp" />
     <ClCompile Include="Src\Controller\MainController.cpp" />
     <ClCompile Include="Src\Controller\MenuController.cpp" />
