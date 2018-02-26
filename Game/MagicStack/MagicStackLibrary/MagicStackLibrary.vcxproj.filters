@@ -72,6 +72,9 @@
     <ClInclude Include="Src\Controller\GameController.h">
       <Filter>Controller</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Model\MatchRound.h">
+      <Filter>Model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp">
@@ -115,6 +118,9 @@
     </ClCompile>
     <ClCompile Include="Src\Controller\GameController.cpp">
       <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Model\MatchRound.cpp">
+      <Filter>Model</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
