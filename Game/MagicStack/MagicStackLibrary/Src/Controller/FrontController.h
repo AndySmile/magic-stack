@@ -9,8 +9,6 @@ namespace MagicStack
 {
     struct IController;
 
-    typedef std::map<std::string, IController*> TControllerIndex;
-
     class CFrontController
     {
         public:
@@ -24,6 +22,9 @@ namespace MagicStack
 
         private:
             void SwitchToController(IController* controller);
+
+        private:
+            typedef std::map<std::string, IController*> TControllerIndex;
 
         private:
             bool IsRunning;
