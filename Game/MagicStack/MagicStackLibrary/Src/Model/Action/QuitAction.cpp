@@ -1,5 +1,5 @@
 #include "QuitAction.h"
-#include "../../Controller/ControllerTransition.h"
+#include "../../Model/ControllerTransition.h"
 
 namespace MagicStack
 {

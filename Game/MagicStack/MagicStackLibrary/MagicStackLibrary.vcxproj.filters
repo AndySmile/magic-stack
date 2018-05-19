@@ -16,6 +16,12 @@
     <Filter Include="Model\Action">
       <UniqueIdentifier>{9f035be7-941c-4c82-8046-cb37cd491bb0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Controller\Menu">
+      <UniqueIdentifier>{c7d78c7e-4ad8-4450-9dd9-96ce3ab312fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller\Game">
+      <UniqueIdentifier>{46a89a09-5e59-40ea-9cf5-6dc5bad7df1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Helper\Macros.h">
@@ -30,16 +36,7 @@
     <ClInclude Include="Src\Model\IAction.h">
       <Filter>Model</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Controller\ControllerTransition.h">
-      <Filter>Controller</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Controller\MainController.h">
-      <Filter>Controller</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Controller\MenuController.h">
-      <Filter>Controller</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Controller\BaseMenuController.h">
       <Filter>Controller</Filter>
     </ClInclude>
     <ClInclude Include="Src\Model\Menu.h">
@@ -60,17 +57,11 @@
     <ClInclude Include="Src\Model\Action\QuitAction.h">
       <Filter>Model\Action</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Controller\HelpController.h">
-      <Filter>Controller</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Controller\IControllerActionExecutable.h">
       <Filter>Controller</Filter>
     </ClInclude>
     <ClInclude Include="Src\Model\Action\ControllerAction.h">
       <Filter>Model\Action</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Controller\GameController.h">
-      <Filter>Controller</Filter>
     </ClInclude>
     <ClInclude Include="Src\Model\MatchRound.h">
       <Filter>Model</Filter>
@@ -78,21 +69,27 @@
     <ClInclude Include="Src\Model\Card.h">
       <Filter>Model</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Controller\Menu\BaseMenuController.h">
+      <Filter>Controller\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Controller\Menu\HelpController.h">
+      <Filter>Controller\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Controller\Menu\MenuController.h">
+      <Filter>Controller\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Controller\Game\GameController.h">
+      <Filter>Controller\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Model\ControllerTransition.h">
+      <Filter>Model</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp">
       <Filter>Controller</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Controller\ControllerTransition.cpp">
-      <Filter>Controller</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Controller\MainController.cpp">
-      <Filter>Controller</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Controller\MenuController.cpp">
-      <Filter>Controller</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Controller\BaseMenuController.cpp">
       <Filter>Controller</Filter>
     </ClCompile>
     <ClCompile Include="Src\Model\Menu.cpp">
@@ -113,19 +110,28 @@
     <ClCompile Include="Src\Model\Action\QuitAction.cpp">
       <Filter>Model\Action</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Controller\HelpController.cpp">
-      <Filter>Controller</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Model\Action\ControllerAction.cpp">
       <Filter>Model\Action</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Controller\GameController.cpp">
-      <Filter>Controller</Filter>
     </ClCompile>
     <ClCompile Include="Src\Model\MatchRound.cpp">
       <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="Src\Model\Card.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Controller\Menu\BaseMenuController.cpp">
+      <Filter>Controller\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Controller\Menu\HelpController.cpp">
+      <Filter>Controller\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Controller\Menu\MenuController.cpp">
+      <Filter>Controller\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Controller\Game\GameController.cpp">
+      <Filter>Controller\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Model\ControllerTransition.cpp">
       <Filter>Model</Filter>
     </ClCompile>
   </ItemGroup>

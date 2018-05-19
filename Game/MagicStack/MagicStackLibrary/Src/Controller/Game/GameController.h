@@ -1,7 +1,7 @@
-#ifndef __MAGICSTACK_CONTROLLER_GAMECONTROLLER_H__
-#define __MAGICSTACK_CONTROLLER_GAMECONTROLLER_H__
+#ifndef __MAGICSTACK_CONTROLLER_GAME_GAMECONTROLLER_H__
+#define __MAGICSTACK_CONTROLLER_GAME_GAMECONTROLLER_H__
 
-#include "BaseMenuController.h"
+#include "../Menu/BaseMenuController.h"
 
 namespace MagicStack
 {

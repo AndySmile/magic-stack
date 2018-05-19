@@ -1,8 +1,8 @@
-#ifndef __MAGICSTACK_CONTROLLER_HELPCONTROLLER_H__
-#define __MAGICSTACK_CONTROLLER_HELPCONTROLLER_H__
+#ifndef __MAGICSTACK_CONTROLLER_MENU_HELPCONTROLLER_H__
+#define __MAGICSTACK_CONTROLLER_MENU_HELPCONTROLLER_H__
 
 #include "BaseMenuController.h"
-#include "IControllerActionExecutable.h"
+#include "../IControllerActionExecutable.h"
 
 namespace MagicStack
 {

@@ -3,7 +3,7 @@
 
 #include <string>
 #include <map>
-#include "ControllerTransition.h"
+#include "../Model/ControllerTransition.h"
 
 namespace MagicStack
 {

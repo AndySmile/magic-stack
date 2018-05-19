@@ -1,7 +1,7 @@
 #include "MainController.h"
-#include "MenuController.h"
-#include "HelpController.h"
-#include "GameController.h"
+#include "Menu/MenuController.h"
+#include "Menu/HelpController.h"
+#include "Game/GameController.h"
 
 namespace MagicStack
 {

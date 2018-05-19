@@ -1,7 +1,7 @@
 #include "MenuController.h"
-#include "ControllerTransition.h"
-#include "../Model/Action/TransitionAction.h"
-#include "../Model/Action/QuitAction.h"
+#include "../../Model/ControllerTransition.h"
+#include "../../Model/Action/TransitionAction.h"
+#include "../../Model/Action/QuitAction.h"
 
 namespace MagicStack
 {

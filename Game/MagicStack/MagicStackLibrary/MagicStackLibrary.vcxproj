@@ -19,20 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Src\Controller\BaseMenuController.h" />
-    <ClInclude Include="Src\Controller\GameController.h" />
-    <ClInclude Include="Src\Controller\HelpController.h" />
+    <ClInclude Include="Src\Controller\Game\GameController.h" />
     <ClInclude Include="Src\Controller\IControllerActionExecutable.h" />
     <ClInclude Include="Src\Controller\MainController.h" />
-    <ClInclude Include="Src\Controller\ControllerTransition.h" />
     <ClInclude Include="Src\Controller\FrontController.h" />
     <ClInclude Include="Src\Controller\IController.h" />
-    <ClInclude Include="Src\Controller\MenuController.h" />
+    <ClInclude Include="Src\Controller\Menu\BaseMenuController.h" />
+    <ClInclude Include="Src\Controller\Menu\HelpController.h" />
+    <ClInclude Include="Src\Controller\Menu\MenuController.h" />
     <ClInclude Include="Src\Helper\Macros.h" />
     <ClInclude Include="Src\Model\Action\ControllerAction.h" />
     <ClInclude Include="Src\Model\Action\QuitAction.h" />
     <ClInclude Include="Src\Model\Action\TransitionAction.h" />
     <ClInclude Include="Src\Model\Card.h" />
+    <ClInclude Include="Src\Model\ControllerTransition.h" />
     <ClInclude Include="Src\Model\IAction.h" />
     <ClInclude Include="Src\Model\MatchRound.h" />
     <ClInclude Include="Src\Model\Menu.h" />
@@ -41,17 +41,17 @@
     <ClInclude Include="Src\View\MenuView.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Src\Controller\BaseMenuController.cpp" />
-    <ClCompile Include="Src\Controller\ControllerTransition.cpp" />
     <ClCompile Include="Src\Controller\FrontController.cpp" />
-    <ClCompile Include="Src\Controller\GameController.cpp" />
-    <ClCompile Include="Src\Controller\HelpController.cpp" />
+    <ClCompile Include="Src\Controller\Game\GameController.cpp" />
     <ClCompile Include="Src\Controller\MainController.cpp" />
-    <ClCompile Include="Src\Controller\MenuController.cpp" />
+    <ClCompile Include="Src\Controller\Menu\BaseMenuController.cpp" />
+    <ClCompile Include="Src\Controller\Menu\HelpController.cpp" />
+    <ClCompile Include="Src\Controller\Menu\MenuController.cpp" />
     <ClCompile Include="Src\Model\Action\ControllerAction.cpp" />
     <ClCompile Include="Src\Model\Action\QuitAction.cpp" />
     <ClCompile Include="Src\Model\Action\TransitionAction.cpp" />
     <ClCompile Include="Src\Model\Card.cpp" />
+    <ClCompile Include="Src\Model\ControllerTransition.cpp" />
     <ClCompile Include="Src\Model\MatchRound.cpp" />
     <ClCompile Include="Src\Model\Menu.cpp" />
     <ClCompile Include="Src\Model\MenuItem.cpp" />

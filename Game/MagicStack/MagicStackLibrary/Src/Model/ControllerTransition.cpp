@@ -1,5 +1,5 @@
 #include "ControllerTransition.h"
-#include "FrontController.h"
+#include "../Controller/FrontController.h"
 
 namespace MagicStack
 {

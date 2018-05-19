@@ -1,9 +1,9 @@
-#ifndef __MAGICSTACK_CONTROLLER_BASEMENUCONTROLLER_H__
-#define __MAGICSTACK_CONTROLLER_BASEMENUCONTROLLER_H__
+#ifndef __MAGICSTACK_CONTROLLER_MENU_BASEMENUCONTROLLER_H__
+#define __MAGICSTACK_CONTROLLER_MENU_BASEMENUCONTROLLER_H__
 
-#include "IController.h"
-#include "../Model/Menu.h"
-#include "../View/MenuView.h"
+#include "../IController.h"
+#include "../../Model/Menu.h"
+#include "../../View/MenuView.h"
 
 namespace MagicStack
 {
