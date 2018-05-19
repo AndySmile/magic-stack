@@ -7,15 +7,15 @@ namespace MagicStack
         : CurrentRound(0)
         , Player(player)
         , Opponent(opponent)
-        , AIController(new CAIController())
-        , PlayerController(new CPlayerInputController())
+        , AIController(/*new CAIController()*/)
+        , PlayerController(/*new CPlayerInputController()*/)
     {
     }
 
     CMatchRound::~CMatchRound()
     {
-        DELETE_OBJECT(this->AIController);
-        DELETE_OBJECT(this->PlayerController);
+        /*DELETE_OBJECT(this->AIController);
+        DELETE_OBJECT(this->PlayerController);*/
     }
 
     CCard& CMatchRound::GetAttackCard() const
@@ -30,12 +30,14 @@ namespace MagicStack
 
     ICardController* CMatchRound::GetCurrentController()
     {
-        if (this->CurrentRound == 0) {
+        /*if (this->CurrentRound == 0) {
             return this->PlayerController;
         }
         else {
             return this->AIController;
-        }
+        }*/
+
+        return nullptr;
     }
 
     void CMatchRound::NextRound()
