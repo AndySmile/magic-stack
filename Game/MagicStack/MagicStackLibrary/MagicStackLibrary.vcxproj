@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Controller\BaseController.h" />
     <ClInclude Include="Src\Controller\Game\GameController.h" />
     <ClInclude Include="Src\Controller\IControllerActionExecutable.h" />
     <ClInclude Include="Src\Controller\MainController.h" />
@@ -41,6 +42,7 @@
     <ClInclude Include="Src\View\MenuView.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Controller\BaseController.cpp" />
     <ClCompile Include="Src\Controller\FrontController.cpp" />
     <ClCompile Include="Src\Controller\Game\GameController.cpp" />
     <ClCompile Include="Src\Controller\MainController.cpp" />
