@@ -23,14 +23,6 @@ namespace MagicStack
         }
     }
 
-    void CHelpController::OnEnter()
-    {
-    }
-
-    void CHelpController::OnLeave()
-    {
-    }
-
     std::string CHelpController::GetAlias() const
     {
         return "help";

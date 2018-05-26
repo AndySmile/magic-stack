@@ -2,6 +2,7 @@
 #define __MAGICSTACK_CONTROLLER_MENU_BASEMENUCONTROLLER_H__
 
 #include "../IController.h"
+#include "../BaseController.h"
 #include "../../Model/Menu.h"
 #include "../../View/MenuView.h"
 
@@ -9,7 +10,7 @@ namespace MagicStack
 {
     struct IAction;
 
-    class CBaseMenuController : public IController
+    class CBaseMenuController : public BaseController
     {
         public:
             CBaseMenuController() = default;

@@ -14,8 +14,6 @@ namespace MagicStack
             virtual ~CGameController() = default;
 
             virtual void Init(CControllerTransition& transition) override;
-            virtual void OnEnter() override;
-            virtual void OnLeave() override;
             virtual std::string GetAlias() const;
     };
 }

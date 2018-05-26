@@ -7,16 +7,6 @@ namespace MagicStack
 
     }
 
-    void CGameController::OnEnter()
-    {
-
-    }
-
-    void CGameController::OnLeave()
-    {
-
-    }
-
     std::string CGameController::GetAlias() const
     {
         return "game";

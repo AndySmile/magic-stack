@@ -7,7 +7,7 @@ namespace MagicStack
 {
     void CMenuController::Init(CControllerTransition& transition) 
     {
-        this->Menu.AddItem(1, "Start Game", nullptr);
+        this->Menu.AddItem(1, "Start Game", new CTransitionAction(transition, "game"));
         this->Menu.AddItem(2, "Help", new CTransitionAction(transition, "help"));
         this->Menu.AddItem(3, "Quit", new CQuitAction(transition));
     }
@@ -16,10 +16,6 @@ namespace MagicStack
     {
         this->View.DisplayHeadline();
         this->View.DisplayWelcome();
-    }
-
-    void CMenuController::OnLeave() 
-    {
     }
 
     std::string CMenuController::GetAlias() const
