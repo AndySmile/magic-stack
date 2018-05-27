@@ -16,7 +16,7 @@ namespace MagicStack
 
             virtual void Init(CControllerTransition& transition) override;
             virtual void ExecuteControllerAction(const std::string& action) override;
-            virtual std::string GetAlias() const;
+            virtual std::string GetAlias() const override;
 
         private:
             void DisplayWorldDescription() const;
