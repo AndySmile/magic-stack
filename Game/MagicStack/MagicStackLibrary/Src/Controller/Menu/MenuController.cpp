@@ -20,6 +20,6 @@ namespace MagicStack
 
     std::string CMenuController::GetAlias() const
     {
-        return "main";
+        return "menu";
     }
 }
