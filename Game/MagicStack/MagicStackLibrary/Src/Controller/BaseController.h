@@ -10,8 +10,8 @@ namespace MagicStack
         public:
             virtual ~BaseController() = default;
 
-            virtual void OnEnter();
-            virtual void OnLeave();
+            virtual void OnEnter() override;
+            virtual void OnLeave() override;
     };
 }
 
