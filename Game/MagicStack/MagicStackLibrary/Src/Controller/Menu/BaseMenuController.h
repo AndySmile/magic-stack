@@ -10,7 +10,7 @@ namespace MagicStack
 {
     struct IAction;
 
-    class CBaseMenuController : public BaseController
+    class CBaseMenuController : public CBaseController
     {
         public:
             CBaseMenuController() = default;

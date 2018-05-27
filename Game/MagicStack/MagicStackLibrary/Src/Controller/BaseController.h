@@ -5,10 +5,10 @@
 
 namespace MagicStack
 {
-    class BaseController : public IController
+    class CBaseController : public IController
     {
         public:
-            virtual ~BaseController() = default;
+            virtual ~CBaseController() = default;
 
             virtual void OnEnter() override;
             virtual void OnLeave() override;

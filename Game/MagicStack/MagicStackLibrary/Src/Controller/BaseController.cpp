@@ -2,11 +2,11 @@
 
 namespace MagicStack
 {
-    void BaseController::OnEnter()
+    void CBaseController::OnEnter()
     {
     }
 
-    void BaseController::OnLeave()
+    void CBaseController::OnLeave()
     {
     }
 }
