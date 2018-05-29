@@ -14,7 +14,7 @@ namespace MagicStack
 
         virtual void Init(CControllerTransition& transition) = 0;
         virtual void Render() const = 0;
-        virtual IAction* Execute() const = 0;
+        virtual IAction* Execute() = 0;
         virtual void OnEnter() = 0;
         virtual void OnLeave() = 0;
         virtual std::string GetAlias() const = 0;

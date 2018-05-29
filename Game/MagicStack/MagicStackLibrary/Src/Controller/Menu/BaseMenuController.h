@@ -17,7 +17,7 @@ namespace MagicStack
             virtual ~CBaseMenuController() = default;
 
             virtual void Render() const override;
-            virtual IAction* Execute() const override;
+            virtual IAction* Execute() override;
 
         protected:
             CMenu Menu;

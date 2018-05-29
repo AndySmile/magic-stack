@@ -8,7 +8,7 @@ namespace MagicStack
         this->View.DisplayMenu(this->Menu);
     }
 
-    IAction* CBaseMenuController::Execute() const
+    IAction* CBaseMenuController::Execute()
     {
         unsigned int selectedMenuId = 0;
 
