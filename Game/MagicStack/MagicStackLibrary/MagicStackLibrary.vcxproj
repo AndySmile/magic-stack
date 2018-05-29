@@ -35,6 +35,7 @@
     <ClInclude Include="Src\Model\Action\ControllerAction.h" />
     <ClInclude Include="Src\Model\Action\QuitAction.h" />
     <ClInclude Include="Src\Model\Action\TransitionAction.h" />
+    <ClInclude Include="Src\Model\BaseCardAction.h" />
     <ClInclude Include="Src\Model\Card.h" />
     <ClInclude Include="Src\Model\CardAction\FireAction.h" />
     <ClInclude Include="Src\Model\ControllerTransition.h" />
@@ -59,6 +60,7 @@
     <ClCompile Include="Src\Model\Action\ControllerAction.cpp" />
     <ClCompile Include="Src\Model\Action\QuitAction.cpp" />
     <ClCompile Include="Src\Model\Action\TransitionAction.cpp" />
+    <ClCompile Include="Src\Model\BaseCardAction.cpp" />
     <ClCompile Include="Src\Model\Card.cpp" />
     <ClCompile Include="Src\Model\CardAction\FireAction.cpp" />
     <ClCompile Include="Src\Model\ControllerTransition.cpp" />
