@@ -22,6 +22,9 @@
     <Filter Include="Controller\Game">
       <UniqueIdentifier>{46a89a09-5e59-40ea-9cf5-6dc5bad7df1b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Model\CardAction">
+      <UniqueIdentifier>{be726177-4658-47ab-af1c-74ed23c30741}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Helper\Macros.h">
@@ -87,6 +90,21 @@
     <ClInclude Include="Src\Controller\BaseController.h">
       <Filter>Controller</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Controller\Game\IPlayerController.h">
+      <Filter>Controller\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Controller\Game\PlayerController.h">
+      <Filter>Controller\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Model\ICardAction.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Model\CardAction\FireAction.h">
+      <Filter>Model\CardAction</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Controller\Game\AIController.h">
+      <Filter>Controller\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Controller\FrontController.cpp">
@@ -139,6 +157,15 @@
     </ClCompile>
     <ClCompile Include="Src\Controller\BaseController.cpp">
       <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Controller\Game\PlayerController.cpp">
+      <Filter>Controller\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Model\CardAction\FireAction.cpp">
+      <Filter>Model\CardAction</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Controller\Game\AIController.cpp">
+      <Filter>Controller\Game</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
