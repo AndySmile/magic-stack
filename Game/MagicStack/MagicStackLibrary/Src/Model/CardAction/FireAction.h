@@ -1,13 +1,13 @@
 #ifndef __MAGICSTACK_MODEL_CARDACTION_FIREACTION_H__
 #define __MAGICSTACK_MODEL_CARDACTION_FIREACTION_H__
 
-#include "../ICardAction.h"
+#include "../BaseCardAction.h"
 
 namespace MagicStack
 {
     class CCard;
 
-    class CFireAction : public ICardAction
+    class CFireAction : public CBaseCardAction
     {
         public:
             CFireAction() = default;
