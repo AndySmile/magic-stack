@@ -1,14 +1,16 @@
 #include "MatchRound.h"
+#include "Card.h"
+#include "../Controller/Game/IPlayerController.h"
 #include "../Helper/Macros.h"
 
 namespace MagicStack
 {
-    CMatchRound::CMatchRound(CCard& player, CCard& opponent)
+    CMatchRound::CMatchRound()
         : CurrentRound(0)
-        , Player(player)
-        , Opponent(opponent)
-        , AIController(/*new CAIController()*/)
-        , PlayerController(/*new CPlayerInputController()*/)
+        , FirstPlayerController(nullptr)
+        , SecondPlayerController(nullptr)
+        , AttackCard(nullptr)
+        , DefenseCard(nullptr)
     {
     }
 
@@ -18,30 +20,50 @@ namespace MagicStack
         DELETE_OBJECT(this->PlayerController);*/
     }
 
-    CCard& CMatchRound::GetAttackCard() const
+    void CMatchRound::SetPlayerController(IPlayerController* controller, const PlayerIndex index)
     {
-        return (this->CurrentRound == 0) ? this->Player : this->Opponent;
-    }
-
-    CCard& CMatchRound::GetDefenseCard() const
-    {
-        return (this->CurrentRound == 0) ? this->Opponent : this->Player;
-    }
-
-    ICardController* CMatchRound::GetCurrentController()
-    {
-        /*if (this->CurrentRound == 0) {
-            return this->PlayerController;
+        if (index == PlayerIndex::FirstPlayer) {
+            this->FirstPlayerController = controller;
+            this->AttackCard = this->FirstPlayerController->GetActiveCard();
+        } else {
+            this->SecondPlayerController = controller;
+            this->DefenseCard = this->SecondPlayerController->GetActiveCard();
         }
-        else {
-            return this->AIController;
-        }*/
+    }
 
-        return nullptr;
+    CCard* CMatchRound::GetAttackCard() const
+    {
+        return (this->CurrentRound == 0) ? this->AttackCard : this->DefenseCard;
+    }
+
+    CCard* CMatchRound::GetDefenseCard() const
+    {
+        return (this->CurrentRound == 0) ? this->DefenseCard : this->AttackCard;
+    }
+
+    IPlayerController* CMatchRound::GetCurrentController() const
+    {
+        return (this->CurrentRound == 0) ? this->FirstPlayerController : this->SecondPlayerController;
     }
 
     void CMatchRound::NextRound()
     {
         this->CurrentRound = (this->CurrentRound == 0) ? 1 : 0;
+    }
+
+    bool CMatchRound::IsRunning() const
+    {
+        return (
+                this->AttackCard->IsAlive() 
+            &&  this->DefenseCard->IsAlive()
+        );
+    }
+
+    bool CMatchRound::HasAllPlayer() const
+    {
+        return (
+                this->FirstPlayerController != nullptr 
+            &&  this->SecondPlayerController != nullptr
+        );
     }
 }

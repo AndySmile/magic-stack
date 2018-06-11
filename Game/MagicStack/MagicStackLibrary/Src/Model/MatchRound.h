@@ -3,7 +3,7 @@
 
 namespace MagicStack
 {
-    struct ICardController;
+    struct IPlayerController;
     class CCard;
     class CAIController;
     class CPlayerInputController;
@@ -11,20 +11,32 @@ namespace MagicStack
     class CMatchRound
     {
         public:
-            CMatchRound(CCard& player, CCard& opponent);
+            CMatchRound();
             ~CMatchRound();
 
-            CCard& GetAttackCard() const;
-            CCard& GetDefenseCard() const;
-            ICardController* GetCurrentController();
+        public:
+            enum class PlayerIndex
+            {
+                FirstPlayer,
+                SecondPlayer
+            };
+
+        public:
+            void SetPlayerController(IPlayerController* controller, const PlayerIndex index);
+            CCard* GetAttackCard() const;
+            CCard* GetDefenseCard() const;
+            IPlayerController* GetCurrentController() const;
+            void Init();
             void NextRound();
+            bool IsRunning() const;
+            bool HasAllPlayer() const;
 
         private:
             unsigned int CurrentRound;
-            CCard& Player;
-            CCard& Opponent;
-            CAIController* AIController;
-            CPlayerInputController* PlayerController;
+            IPlayerController* FirstPlayerController;
+            IPlayerController* SecondPlayerController;
+            CCard* AttackCard;
+            CCard* DefenseCard;
     };
 }
 
