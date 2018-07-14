@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CE425337-321B-46E0-A094-AF5031C3B596}</ProjectGuid>
+    <ProjectGuid>{3F1BAC69-A971-42AF-ABB0-FCA7C1227558}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Menu</RootNamespace>
+    <RootNamespace>CardGamePrototype</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,16 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Src\Controller\ControllerTransition.cpp" />
-    <ClCompile Include="Src\Controller\FrontController.cpp" />
-    <ClCompile Include="Src\Main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Src\Controller\ControllerTransition.h" />
-    <ClInclude Include="Src\Controller\FrontController.h" />
-    <ClInclude Include="Src\Controller\IController.h" />
-    <ClInclude Include="Src\Macros.h" />
-    <ClInclude Include="Src\Model\IMenuAction.h" />
+    <ClCompile Include="Source\Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

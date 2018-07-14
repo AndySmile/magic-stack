@@ -18,10 +18,22 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Controller\ControllerTransition.h" />
+    <ClInclude Include="Src\Controller\FrontController.h" />
+    <ClInclude Include="Src\Controller\IController.h" />
+    <ClInclude Include="Src\Macros.h" />
+    <ClInclude Include="Src\Model\IMenuAction.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\Controller\ControllerTransition.cpp" />
+    <ClCompile Include="Src\Controller\FrontController.cpp" />
+    <ClCompile Include="Src\Main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A18CFF53-B6B8-4C6B-A77E-C2A60F9679A6}</ProjectGuid>
+    <ProjectGuid>{C31C832D-83C3-43CD-A708-ED38E0E222D9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CardGamePrototype</RootNamespace>
+    <RootNamespace>MenuPrototype</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -141,9 +153,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Src\Main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
