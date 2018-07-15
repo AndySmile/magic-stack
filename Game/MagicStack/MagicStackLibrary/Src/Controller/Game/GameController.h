@@ -15,8 +15,8 @@ namespace MagicStack
             virtual ~CGameController();
 
             virtual void Init(CControllerTransition& transition) override;
-            virtual void Render() const;
-            virtual IAction* Execute();
+            virtual void Render() const override;
+            virtual IAction* Execute() override;
             virtual std::string GetAlias() const override;
 
         private:
