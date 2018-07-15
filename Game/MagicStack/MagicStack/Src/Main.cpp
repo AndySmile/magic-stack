@@ -6,9 +6,11 @@
 
 int main()
 {
-    MagicStack::CMainController mainController;
+    {
+        MagicStack::CMainController mainController;
 
-    mainController.Run();
+        mainController.Run();
+    }
 
     system("pause");
 

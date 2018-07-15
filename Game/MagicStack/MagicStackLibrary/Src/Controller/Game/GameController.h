@@ -12,7 +12,7 @@ namespace MagicStack
     {
         public:
             CGameController();
-            virtual ~CGameController() = default;
+            virtual ~CGameController();
 
             virtual void Init(CControllerTransition& transition) override;
             virtual void Render() const;

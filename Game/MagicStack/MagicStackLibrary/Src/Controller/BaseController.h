@@ -8,7 +8,7 @@ namespace MagicStack
     class CBaseController : public IController
     {
         public:
-            virtual ~CBaseController() = default;
+            virtual ~CBaseController();
 
             virtual void OnEnter() override;
             virtual void OnLeave() override;

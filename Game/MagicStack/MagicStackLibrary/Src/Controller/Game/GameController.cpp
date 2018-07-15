@@ -5,15 +5,21 @@
 #include "../../Model/Action/TransitionAction.h"
 #include "../../Model/ICardAction.h"
 
-// DEBUG BEGIN
-#include <iostream>
-// DEBUG END
+#ifdef _DEBUG
+    #include <iostream>
+    #include "../../Helper/Macros.h"
+#endif
 
 namespace MagicStack
 {
     CGameController::CGameController()
         : TransitionAction(nullptr)
     {
+    }
+
+    CGameController::~CGameController()
+    {
+        PRINT_RELEASE_INFO("CGameController");
     }
 
     void CGameController::Init(CControllerTransition& transition)

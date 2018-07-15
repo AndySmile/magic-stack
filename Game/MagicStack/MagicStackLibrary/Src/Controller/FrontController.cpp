@@ -18,6 +18,8 @@ namespace MagicStack
 
     CFrontController::~CFrontController()
     {
+        PRINT_RELEASE_INFO("CFrontController");
+
         for (auto it = this->ControllerIndex.begin(); it != this->ControllerIndex.end(); ++it) {
             DELETE_OBJECT(it->second);
         }

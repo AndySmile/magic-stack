@@ -3,8 +3,18 @@
 #include "../../Model/Action/TransitionAction.h"
 #include "../../Model/Action/QuitAction.h"
 
+#ifdef _DEBUG
+    #include <iostream>
+    #include "../../Helper/Macros.h"
+#endif
+
 namespace MagicStack
 {
+    CMenuController::~CMenuController()
+    {
+        PRINT_RELEASE_INFO("CMenuController");
+    }
+
     void CMenuController::Init(CControllerTransition& transition) 
     {
         this->Menu.AddItem(1, "Start Game", new CTransitionAction(transition, "game"));

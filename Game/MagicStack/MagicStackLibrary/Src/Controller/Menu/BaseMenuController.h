@@ -14,7 +14,7 @@ namespace MagicStack
     {
         public:
             CBaseMenuController() = default;
-            virtual ~CBaseMenuController() = default;
+            virtual ~CBaseMenuController();
 
             virtual void Render() const override;
             virtual IAction* Execute() override;

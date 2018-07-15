@@ -12,7 +12,7 @@ namespace MagicStack
     {
         public:
             CMenuController() = default;
-            virtual ~CMenuController() = default;
+            virtual ~CMenuController();
 
             virtual void Init(CControllerTransition& transition) override;
             virtual void OnEnter() override;
