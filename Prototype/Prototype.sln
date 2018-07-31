@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MenuPrototype", "MenuProtot
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CardGamePrototype", "CardGamePrototype\CardGamePrototype.vcxproj", "{3F1BAC69-A971-42AF-ABB0-FCA7C1227558}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CardCreatureGameplayPrototype", "CardCreatureGameplayPrototype\CardCreatureGameplayPrototype.vcxproj", "{AD745141-221F-4EE0-8014-84ECA20727CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{3F1BAC69-A971-42AF-ABB0-FCA7C1227558}.Release|x64.Build.0 = Release|x64
 		{3F1BAC69-A971-42AF-ABB0-FCA7C1227558}.Release|x86.ActiveCfg = Release|Win32
 		{3F1BAC69-A971-42AF-ABB0-FCA7C1227558}.Release|x86.Build.0 = Release|Win32
+		{AD745141-221F-4EE0-8014-84ECA20727CA}.Debug|x64.ActiveCfg = Debug|x64
+		{AD745141-221F-4EE0-8014-84ECA20727CA}.Debug|x64.Build.0 = Debug|x64
+		{AD745141-221F-4EE0-8014-84ECA20727CA}.Debug|x86.ActiveCfg = Debug|Win32
+		{AD745141-221F-4EE0-8014-84ECA20727CA}.Debug|x86.Build.0 = Debug|Win32
+		{AD745141-221F-4EE0-8014-84ECA20727CA}.Release|x64.ActiveCfg = Release|x64
+		{AD745141-221F-4EE0-8014-84ECA20727CA}.Release|x64.Build.0 = Release|x64
+		{AD745141-221F-4EE0-8014-84ECA20727CA}.Release|x86.ActiveCfg = Release|Win32
+		{AD745141-221F-4EE0-8014-84ECA20727CA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
