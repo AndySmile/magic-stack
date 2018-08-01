@@ -32,6 +32,14 @@ enum class ECardType
     MagicCard
 };
 
+enum class EElementCardType
+{
+    Fire = 1,
+    Water = 2,
+    Sand = 3,
+    Air = 4
+};
+
 struct ICard
 {
     virtual ~ICard() = default;
@@ -74,6 +82,28 @@ class CDisplay
             std::cout << "\t [DEBUG] | " << message << std::endl;
         }
 };
+
+class CDebugDisplay 
+{
+    public:
+        static void Init(const CDisplay& display);
+        static void Message(const std::string message);
+
+    private:
+        static CDisplay Display;
+};
+
+CDisplay CDebugDisplay::Display;
+
+void CDebugDisplay::Init(const CDisplay& display)
+{
+    Display = display;
+}
+
+void CDebugDisplay::Message(const std::string message)
+{
+    Display.DisplayDebugMessage(message);
+}
 
 class CInputHandler
 {
@@ -149,7 +179,6 @@ class CCreatureCard : public CBaseCard
 
         void Execute() override
         {
-            this->Name;
         }
 
         unsigned int GetStrength() const
@@ -175,6 +204,8 @@ class CCreatureCard : public CBaseCard
 
         void LoseHealth(const unsigned int value)
         {
+            CDebugDisplay::Message(this->Name + " is losing health by " + std::to_string(value));
+
             if (this->Health > value) {
                 this->Health -= std::abs(static_cast<int>(value));
             } else {
@@ -195,8 +226,10 @@ class CCreatureCard : public CBaseCard
 class CElementCard : public CBaseCard
 {
     public:
-        CElementCard(const std::string& name)
+        CElementCard(const std::string& name, const EElementCardType elementType, const int influencePoints)
             : CBaseCard(ECardType::ElementCard, name)
+            , ElementType(elementType)
+            , InfluencePoints(influencePoints)
         {
         }
 
@@ -205,6 +238,20 @@ class CElementCard : public CBaseCard
         void Execute() override
         {
         }
+
+        int GetInfluencePoints() const
+        {
+            return this->InfluencePoints;
+        }
+
+        EElementCardType GetElementType() const
+        {
+            return this->ElementType;
+        }
+
+    private:
+        EElementCardType ElementType;
+        int InfluencePoints;
 };
 
 class CMagicCard : public CBaseCard
@@ -352,11 +399,11 @@ class CAIController : public CBasePlayerController
         }
 };
 
-class CMatchSystem
+class CGameplaySystem
 {
     public:
-        CMatchSystem() = default;
-        ~CMatchSystem() = default;
+        CGameplaySystem() = default;
+        ~CGameplaySystem() = default;
 
         /**
          * TODO
@@ -365,26 +412,30 @@ class CMatchSystem
          *  - calculates the attack score by boost or reduce the attack strength depending on the element type (each element card has a boost and reduce score as percentage value)
          *  - apply the attack value to each creature card
          */
-        void RunTurn(CCreatureCard* firstCard, CCreatureCard* secondCard, const ICard& firstActiveCard, const ICard& secondActiveCard) const
+        void RunTurn(CCreatureCard* firstCreature, CCreatureCard* secondCreature, const ICard* firstActiveCard, const ICard* secondActiveCard) const
         {
-            unsigned int attackStrength = firstCard->GetStrength();
-
-            float impactScore = 1.0f;
-
-            if (firstActiveCard.GetType() == ECardType::ElementCard && secondActiveCard.GetType() == ECardType::ElementCard) {
-                impactScore = this->CalculateImpactScoreByElementCards(firstActiveCard, secondActiveCard);
+            if (firstActiveCard->GetType() == ECardType::ElementCard && secondActiveCard->GetType() == ECardType::ElementCard) {
+                this->AttackByElementCards(firstCreature, secondCreature, dynamic_cast<const CElementCard*>(firstActiveCard), dynamic_cast<const CElementCard*>(secondActiveCard));
             }
-
-            secondCard->LoseHealth(attackStrength * impactScore);
         }
 
     private:
-        /**
-         * TODO consider int type instead of a float
-         */
-        float CalculateImpactScoreByElementCards(const ICard& firstActiveCard, const ICard& secondActiveCard) const
+        void AttackByElementCards(CCreatureCard* firstCreature, CCreatureCard* secondCreature, const CElementCard* firstActiveCard, const CElementCard* secondActiveCard) const
         {
-            return 1.0f;
+            float firstCardBoost = firstActiveCard->GetInfluencePoints();
+            float secondCardBoost = secondActiveCard->GetInfluencePoints();
+
+            if (firstActiveCard->GetElementType() < secondActiveCard->GetElementType()) {
+                firstCardBoost *= 0.1f;
+            } else if (firstActiveCard->GetElementType() > secondActiveCard->GetElementType()) {
+                secondCardBoost *= 0.1f;
+            }
+
+            CDebugDisplay::Message("firstCardBoost: " + std::to_string(firstCardBoost));
+            CDebugDisplay::Message("secondCardBoost: " + std::to_string(secondCardBoost));
+
+            secondCreature->LoseHealth(firstCreature->GetStrength() * firstCardBoost);
+            firstCreature->LoseHealth(secondCreature->GetStrength() * secondCardBoost);
         }
 };
 
@@ -459,10 +510,10 @@ class CGameplayController : protected CBaseController
 
         void PrepareElementCardList()
         {
-            this->ElementCardList.push_back(new CElementCard("Fire"));
-            this->ElementCardList.push_back(new CElementCard("Water"));
-            this->ElementCardList.push_back(new CElementCard("Sand"));
-            this->ElementCardList.push_back(new CElementCard("Air"));
+            this->ElementCardList.push_back(new CElementCard("Fire", EElementCardType::Fire, 2));
+            this->ElementCardList.push_back(new CElementCard("Water", EElementCardType::Water, 2));
+            this->ElementCardList.push_back(new CElementCard("Sand", EElementCardType::Sand, 2));
+            this->ElementCardList.push_back(new CElementCard("Air", EElementCardType::Air, 2));
         }
 
         void PrepareMagicCardList()
@@ -486,7 +537,15 @@ class CGameplayController : protected CBaseController
                 ICard* firstPickedCard = this->PlayerControllerList[0]->ActivateCard();
                 ICard* secondPickedCard = this->PlayerControllerList[1]->ActivateCard();
 
-                this->MatchSystem.RunTurn(firstCreature, secondCreature, *firstPickedCard, *secondPickedCard);
+                this->MatchSystem.RunTurn(firstCreature, secondCreature, firstPickedCard, secondPickedCard);
+            }
+
+            if (firstCreature->IsAlive()) {
+                this->Display->DisplayDebugMessage("first creature survived!");
+            } else if (secondCreature->IsAlive()) {
+                this->Display->DisplayDebugMessage("second creature survived!");
+            } else {
+                this->Display->DisplayDebugMessage("No survivers!");
             }
         }
 
@@ -495,7 +554,7 @@ class CGameplayController : protected CBaseController
         CardList CreatureCardList;
         CardList ElementCardList;
         CardList MagicCardList;
-        CMatchSystem MatchSystem;
+        CGameplaySystem MatchSystem;
 };
 
 int main()
@@ -504,10 +563,12 @@ int main()
     CInputHandler input;
     CGameplayController gameplayController(display);
     CPlayerController playerController(display, input);
-    CAIController aiController(display);
+    CPlayerController secondPlayerController(display, input);
+
+    CDebugDisplay::Init(display);
 
     gameplayController.AddPlayerController(&playerController);
-    gameplayController.AddPlayerController(&aiController);
+    gameplayController.AddPlayerController(&secondPlayerController);
 
     gameplayController.Run();
 
